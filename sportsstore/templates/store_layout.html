@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>SportsStore</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link href="/files/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <style>
+        /* .contenido {
+            height: 43vw;
+        
+        }
+
+        body {
+            background-image: radial-gradient(ellipse farthest-corner at 45px 30px , rgb(255, 255, 255) 59%, rgba(248, 0, 95, 0.856) 9%, #500329f6 98%);
+    background-repeat: no-repeat;
+        } */
+    </style>
+</head>
+<body> 
+    <div class="bg-dark text-white p-2">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col navbar-brand">SPORTS STORE</div>
+                <div class="col-6 navbar-text text-end">
+                    {{ handler "cart" "getwidget" }}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row m-1 p-1 contenido">
+        <div id="sidebar" class="col-3">               
+            {{ template "left_column" . }}
+        </div>
+        <div class="col-9">
+            {{ template "right_column" . }}
+        </div>
+    </div>
+</body>
+</html>
